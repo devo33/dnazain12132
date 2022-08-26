@@ -1,16 +1,47 @@
-# dnazain12132
 
-A new Flutter project.
+# UZET Bulk SMS API 
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+The easiest global service to provide short message service, where through the API link, you can send to all your customers
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Send OTP SMS
+
+Generate and Deliver One Time Password Token to the Recipient.
+
+
+```bash
+  Application API URL: www.uzet.ae/YOUR_APP/YOUR_TOKEN/send
+```
+
+
+## API Reference
+
+#### Sample Request 
+
+```http
+  https://www.uzet.ae/YOUR_APP/YOUR_TOKEN/send
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `phone_number` | `string` | **Required**. Client Phone Number |
+| `msg` | `string` | **Required**. Your massage or OTP  |
+| `UZET_KEY` | `string` | **Required**. Your UZET API key |
+
+
+#### Sample Response 
+
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `Body`      | `string` | **Text of massage** |
+| `From`      | `string` | **Name Sender ( QiCard )** |
+| `To`      | `string` | **Phone Number of Client** |
+| `Date`      | `string` | **The date and time the message was sent**.|
+| `SMS_ID`      | `string` | **Get all details about this SMS**.|
+| `Status`      | `string` | **received,non-received**.|
+
+
+
